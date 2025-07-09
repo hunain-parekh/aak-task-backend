@@ -9,6 +9,7 @@ This project provides a **Django REST API** for user authentication (Signup, Log
 - **Backend:** Django, Django REST Framework
 - **Auth:** JWT (via `djangorestframework-simplejwt`)
 - **API Docs:** Swagger (`drf-yasg`)
+- **Cors:** Add Cros Via (`django-cors-headers`)
 - **Containerization:** Docker, Docker Compose
 - **Env Config:** python-dotenv
 
@@ -34,6 +35,7 @@ Django
 djangorestframework
 djangorestframework-simplejwt
 drf-yasg
+django-cors-headers
 python-dotenv
 ```
 
