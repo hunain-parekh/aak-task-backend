@@ -27,6 +27,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+CORS_ALLOW_ALL_ORIGINS = False
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",  # 👈 React dev server
+]
+
 
 # Application definition
 
@@ -41,6 +47,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'drf_yasg',
     'users',
+    'corsheaders',
 ]
 
 # REST config:
@@ -54,6 +61,7 @@ REST_FRAMEWORK = {
 AUTH_USER_MODEL = 'users.CustomUser'
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',  # 👈 must be first
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
