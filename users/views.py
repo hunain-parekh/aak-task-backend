@@ -29,6 +29,7 @@ class MeView(APIView):
         user = request.user
         return Response({
             'id': user.id,
+            'name': user.name,
             'username': user.username,
             'email': user.email,
             'phone': user.phone,
