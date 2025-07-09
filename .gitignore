@@ -1,0 +1,15 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore virtual environment
+venv/
+
+# Ignore SQLite DB
+db.sqlite3
+
+# Ignore environment variables
+.env
+
+# Ignore Docker stuff
+*.tar
